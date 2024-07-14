@@ -23,9 +23,9 @@ $CONFIG = array (
   'secret' => 'twznE6UMbsrWQcW1rjfWyGdK8zq5Grl1DImtJj1OSCoGDT8/',
   'trusted_domains' => 
   array (
-    0 => 'localhost:8080',
+    0 => 'localhost:8081',
     1 => 'nextcloud.valiantlynx.com',
-    2 => '10.0.0.33'
+    2 => '10.0.0.33:8081'
   ),
   'datadirectory' => '/var/www/html/data',
   'dbtype' => 'mysql',
