@@ -18,19 +18,17 @@ services:
       - MYSQL_USER=nextcloud
 
   app:
-    build: .
-    image: custom-nextcloud
+    image: nextcloud
     restart: always
     ports:
       - 8081:80
     links:
       - db
     volumes:
-      - ./config/:/var/www/html/config/
       - nextcloud:/var/www/html
     environment:
       - MYSQL_PASSWORD=password
       - MYSQL_DATABASE=nextcloud
       - MYSQL_USER=nextcloud
       - MYSQL_HOST=db
-      - TRUSTED_DOMAINS="localhost:8081 nextcloud.valiantlynx.com 10.0.0.33:8081"
+      - NEXTCLOUD_TRUSTED_DOMAINS="localhost:8081 nextcloud.valiantlynx.com 10.0.0.33:8081"
